@@ -1,0 +1,654 @@
+
+1  Take 10 integers from keyboard using loop and print their average value on the screen.
+
+package marchOne;
+import java.util.Scanner;
+public class programOne {
+	    public static void main(String args[]) {
+	        Scanner sc=new Scanner(System.in);
+	      int sum=0;
+	     for(int i=0;i<=10;i++){
+	          System.out.println("enter a number");
+	         sum=sum+sc.nextInt();
+	     }
+System.out.println(sum);
+	    }
+	}
+---------------------------------------------------------------------------
+2 a) Print the following patterns using loop :
+
+import java.util.Scanner;
+public class programTwo {
+    	    public static void main(String args[]) {
+Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+	for(int i=0;i<=n;i++) {
+		for(int j=0;j<=i;j++) {
+		System.out.print("*");
+		}
+		System.out.println();
+	}
+
+}
+}
+result;
+input=5
+output:
+*
+**
+***
+****
+*****
+******
+2 b  public class MyClass { 
+    public static void main(String args[]) {
+    int n=5;
+    for(int i=1;i<n;i++){
+        for(int j=i;j<=n;j++){
+          System.out.print("  ");
+        }
+          for(int j=1;j<=i;j++){
+               System.out.print("* ");
+          }
+          for(int j=1;j<i;j++){
+               System.out.print("* ");
+          }
+           System.out.println();
+        }
+
+        for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            System.out.print("  ");
+        }
+        for(int j=i;j<n;j++){
+            System.out.print( "* ");
+        }
+            for(int j=i;j<=n;j++){
+
+             System.out.print("* ");
+            }
+
+         System.out.println();
+        }
+    }
+    }
+o/p
+
+          *
+        * * * 
+      * * * * * 
+    * * * * * * * 
+  * * * * * * * * * 
+    * * * * * * * 
+      * * * * * 
+        * * * 
+          * 
+
+------------------------------------------------------------------
+3-Print multiplication table of 24, 50 and 29 using loop.
+
+import java.util.Scanner;
+public class programTwo {
+    	    public static void main(String args[]){
+    	    Scanner sc =new Scanner(System.in);
+    	    int mul=sc.nextInt();
+    	    int tables =0;
+    	    for( int i=1;i<=10; i++){
+    	    tables= mul*i ;
+    	    System.out.println(tables);
+    	    }
+}
+}
+---------------------------------------------------------------------------
+4  Print ASCII values and their equivalent characters. ASCII value vary from 0 to 255
+
+package marchOne;
+import java.util.Scanner;
+public class programThree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc = new Scanner(System.in);
+char num =sc.next().charAt(0);
+int ascii =num;
+System.out.println(ascii);
+
+
+	}
+
+}
+---------------------------------------------------------------------------
+5 Factorial of any number n is represented by n! and is equal to 1*2*3*....*(n-1)*n. E.g.-
+4! = 1*2*3*4 = 24
+3! = 3*2*1 = 6
+2! = 2*1 = 2
+Also,
+1! = 1
+0! = 0
+Write a Java program to calculate factorial of a number.
+package marchOne;
+
+public class programfive {
+import java.util.Scanner;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,fact=1;  
+              Scanner sc =new Scanner(System.in); 
+		  int number= sc.nextInt;   
+		  for(i=1;i<=number;i++){    
+		      fact=fact*i;    
+		  } 
+
+		  System.out.println("Factorial of "+number+" is: "+fact);    
+	}
+
+}
+---------------------------------------------------------------------------
+6 Write a program to find greatest common divisor (GCD) or highest common factor (HCF) of given two numbers
+public class fourth
+{
+
+    static int gcd(int a, int b)
+    {
+
+        if (a == 0)
+          return b;
+        if (b == 0)
+          return a;
+     if (a == b)
+            return a;
+        if (a > b)
+            return gcd(a-b, b);
+        return gcd(a, b-a);
+    }
+
+
+    public static void main(String[] args)
+    {
+        int a = 98, b = 56;
+        System.out.println("GCD of " + a +" and " + b + " is " + gcd(a, b));
+    }
+}
+---------------------------------------------------------------------------
+7 Take integer inputs from user until he/she presses q ( Ask to press q to quit after every integer input ). Print average and product of all numbers.
+
+package marchOne;
+import java.util.*;
+public class programSeven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String choice="";
+		int sum =0;
+		int product=1;
+		int count=0;
+		Scanner input =new Scanner(System.in);
+		while(!choice.equals("q")) {
+			System.out.println("Enter a number or q to quit");
+			choice=input.next();
+			if(!choice.equals("q")) {
+				int number =Integer.parseInt(choice);
+				sum=sum+number;
+				product=product*number;
+				count++;
+			}
+		}
+System.out.println((float)sum/count);
+	}
+
+}
+---------------------------------------------------------------------------
+8 Write an infinite loop.
+A inifinte loop never ends. Condition is always true.
+package marchOne;
+
+public class programeEight {
+  static void print(String value) {
+	        System.out.println(value);
+	    }
+
+	    public static void main(String[] args) {
+
+	        for(;;){
+	            print("true..");
+	        }
+
+	    }
+	}
+---------------------------------------------------------------------------
+
+march 1 assignments
+ 1 Write a program to replace a given substring in a sentence with another string. For example, in the sentence, ” A batman with bat” if we replace ”bat” with ”snow”, the new sentence should be printed as ”A snowman with snow”. 
+
+public class ReplaceExample1{  
+public static void main(String args[]){  
+String s1="javatpoint is a very good website";  
+String replaceString=s1.replace('a','e');
+System.out.println(replaceString);  
+}
+} 
+}
+-----------------------------------------------------------------------------------------------------------------------
+2 WAP to tOGGLE each word in the String? 
+public class TestStringFormatter {  
+public static void main(String[] args) {  
+   System.out.println(StringFormatter.toggle("I am sonoo jaiswal"));     
+    }  
+}  
+-----------------------------------------------------------------------------------------------------------------
+3  WAP to reverse tOGGLE each word in the String?
+
+ Input: my name is khan 
+Output: "yM eMAN sI nAHK"
+public class TestStringFormatter {  
+public static void main(String[] args) {  
+    System.out.println(StringFormatter.toggle("my name is khan"));  
+    }  
+}  
+----------------------------------------------------------------------------------------------
+march 2 Assignments;
+1 Truncate Sentence You are given a sentence s and an integer k. 
+You want to truncate s such that it contains only the first k words. Return s after truncating it.
+import java.io.*;   
+public class TruncationExample2   
+{   
+public static void main(String args[])   
+{      
+double num = 556.9871233986399;   
+int decimalplaces = 3;   
+String strnum = "" + num;   
+String strval = "";   
+int count = -1;   
+for (int i = 0; i < strnum.length(); ++i)   
+{  
+if (count > decimalplaces)   
+{   
+break;   
+}   
+else  
+if (strnum.charAt(i) == '.')   
+{   
+count = 1;   
+}   
+else if (count >= 1)   
+{    
+++count;   
+}   
+strval = strval + strnum.charAt(i);   
+}   
+System.out.println("The number before truncation is: "+num);   
+double truncatedvalue = Double.parseDouble(strval);   
+System.out.println("The number after truncation is: "+truncatedvalue);   
+}   
+}  
+-----------------------------------------------------------------------------------------------------------------
+2 How Many Numbers Are Smaller Than the Current Number
+Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number of valid j's such that j != i . Return the answer in an array.
+import java.lang.*;
+class Rextester
+{  
+    public static int[] smallerNumbersThanCurrent(int[] nums) 
+    {
+        int[]ans=new int[nums.length];
+        for(int i=0;i<nums.length;i++)
+        {
+            int count=0;
+            for(int j=0;j<nums.length;j++)
+            {
+                if(nums[i]>nums[j])   count++;
+            }
+            ans[i]=count;
+        }
+        return ans;
+    }
+
+    public static void main(String args[])
+    {
+       int[]nums={8,1,2,2,3};  
+       int[]ans=smallerNumbersThanCurrent(nums);
+
+       for(int num:ans)  
+       {
+           System.out.print(num+" ");
+       }
+
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+3   Check if given String is valid. String is valid if Characters in given string have at least 1 uppercase, 1 lowercase and 1 digit.
+import java.util.regex.*;
+
+class GFG {
+    public static void
+    isAllPresent(String str)
+    {
+        String regex = "^(?=.*[a-z])(?=."
+                       + "*[A-Z])(?=.*\\d)"
+                       + "(?=.*[-+_!@#$%^&*., ?]).+$";
+        Pattern p = Pattern.compile(regex);
+        if (str == null) {
+            System.out.println("No");
+            return;
+        }
+        Matcher m = p.matcher(str);
+        if (m.matches())
+            System.out.println("valid");
+        else
+            System.out.println("invalid");
+    }
+ public static void main(String args[])
+    {
+          String str = "#GeeksForGeeks123@";
+    isAllPresent(str);
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------
+March 4 Assignments 
+1.) Create Bank account array and display details of all Account holders, and also accept user input to create account object as discussed in class.
+import java.util.Scanner;  
+class BankDetails {  
+    private String accno;  
+    private String name;  
+    private String acc_type;  
+    private long balance;  
+    Scanner sc = new Scanner(System.in);  
+    public void openAccount() {  
+        System.out.print("Enter Account No: ");  
+        accno = sc.next();  
+        System.out.print("Enter Account type: ");  
+        acc_type = sc.next();  
+        System.out.print("Enter Name: ");  
+        name = sc.next();  
+        System.out.print("Enter Balance: ");  
+        balance = sc.nextLong();  
+    }  
+    public void showAccount() {  
+        System.out.println("Name of account holder: " + name);  
+        System.out.println("Account no.: " + accno);  
+        System.out.println("Account type: " + acc_type);  
+        System.out.println("Balance: " + balance);  
+    }  
+
+    public void deposit() {  
+        long amt;  
+        System.out.println("Enter the amount you want to deposit: ");  
+        amt = sc.nextLong();  
+        balance = balance + amt;  
+    }  
+
+    public void withdrawal() {  
+        long amt;  
+        System.out.println("Enter the amount you want to withdraw: ");  
+        amt = sc.nextLong();  
+        if (balance >= amt) {  
+            balance = balance - amt;  
+            System.out.println("Balance after withdrawal: " + balance);  
+        } else {  
+            System.out.println("Your balance is less than " + amt + "\tTransaction failed...!!" );  
+        }  
+    }  
+
+    public boolean search(String ac_no) {  
+        if (accno.equals(ac_no)) {  
+            showAccount();  
+            return (true);  
+        }  
+        return (false);  
+    }  
+}  
+public class BankingApp {  
+    public static void main(String arg[]) {  
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("How many number of customers do you want to input? ");  
+        int n = sc.nextInt();  
+        BankDetails C[] = new BankDetails[n];  
+        for (int i = 0; i < C.length; i++) {  
+            C[i] = new BankDetails();  
+            C[i].openAccount();  
+        }  
+        // loop runs until number 5 is not pressed to exit  
+        int ch;  
+        do {  
+            System.out.println("\n ***Banking System Application***");  
+            System.out.println("1. Display all account details \n 2. Search by Account number\n 3. Deposit the amount \n 4. Withdraw the amount \n 5.Exit ");  
+            System.out.println("Enter your choice: ");  
+            ch = sc.nextInt();  
+                switch (ch) {  
+                    case 1:  
+                        for (int i = 0; i < C.length; i++) {  
+                            C[i].showAccount();  
+                        }  
+                        break;  
+                    case 2:  
+                        System.out.print("Enter account no. you want to search: ");  
+                        String ac_no = sc.next();  
+                        boolean found = false;  
+                        for (int i = 0; i < C.length; i++) {  
+                            found = C[i].search(ac_no);  
+                            if (found) {  
+                                break;  
+                            }  
+                        }  
+                        if (!found) {  
+                            System.out.println("Search failed! Account doesn't exist..!!");  
+                        }  
+                        break;  
+                    case 3:  
+                        System.out.print("Enter Account no. : ");  
+                        ac_no = sc.next();  
+                        found = false;  
+                        for (int i = 0; i < C.length; i++) {  
+                            found = C[i].search(ac_no);  
+                            if (found) {  
+                                C[i].deposit();  
+                                break;  
+                            }  
+                        }  
+                        if (!found) {  
+                            System.out.println("Search failed! Account doesn't exist..!!");  
+                        }  
+                        break;  
+                    case 4:  
+                        System.out.print("Enter Account No : ");  
+                        ac_no = sc.next();  
+                        found = false;  
+                        for (int i = 0; i < C.length; i++) {  
+                            found = C[i].search(ac_no);  
+                            if (found) {  
+                                C[i].withdrawal();  
+                                break;  
+                            }  
+                        }  
+                        if (!found) {  
+                            System.out.println("Search failed! Account doesn't exist..!!");  
+                        }  
+                        break;  
+                    case 5:  
+                        System.out.println("See you soon...");  
+                        break;  
+                }  
+            }  
+            while (ch != 5);  
+        }  
+    }  
+---------------------------------------------------------------------------------------------------------------------------
+
+Q1 - What is the output of the following application?
+class Automobile {
+    private String drive() {
+        return "Driving vehicle";
+    }
+}
+
+class Car extends Automobile {
+    protected String drive() {
+        return "Driving car";
+    }
+}
+
+public class ElectricCar extends Car {
+
+    @Override
+    public final String drive() {
+        return "Driving electric car";
+    }
+
+    public static void main(String[] wheels) {
+        final Car car = new ElectricCar();
+        System.out.print(car.drive());
+    }
+}
+ans ;
+B. Driving electric car
+---------------------------------------------------------------------------------------------------
+Q2 - Look at the following code and choose the right option for the word :
+// Shape.java
+public class Shape {
+    protected void display() {
+        System.out.println("Display-base");
+    }
+}
+// Circle.java
+public class Circle extends Shape { <
+    < access - modifier > void display() {
+        System.out.println("Display-derived");
+    }
+}
+ans;
+C. public, protected, and private can be used.
+
+------------------------------------------------------------------------------------------------
+Q3 - What will be the output of the following program?
+class Base {
+    public Base() {
+        System.out.println("Base");
+    }
+}
+
+class Derived extends Base {
+    public Derived() {
+        System.out.println("Derived");
+    }
+}
+
+class DeriDerived extends Derived {
+    public DeriDerived() {
+        System.out.println("DeriDerived");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Derived b = new DeriDerived();
+    }
+}
+ans
+a)  Base
+Derived
+DeriDerived
+----------------------------------------------------------------------------------------------------
+Q4 - Consider the following program:
+class Base {
+    public Base() {
+        System.out.print("Base ");
+    }
+
+    public Base(String s) {
+        System.out.print("Base: " + s);
+    }
+}
+
+class Derived extends Base {
+    public Derived(String s) {
+        super(); // Stmt-1
+        super(s); // Stmt-2
+        System.out.print("Derived ");
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Base base = new Derived("Hello ");
+    }
+}
+Select three correct options from the following list:
+
+b) Removing Stmt-1 will make the program compilable and it will print the following: Base: Hello Derived.
+c) Removing Stmt-2 will make the program compilable and it will print the following: Base Derived.
+d) Removing both Stmt-1 and Stmt-2 will make the program compilable and it will print the following: Base Derived.
+e) Removing both Stmt-1 and Stmt-2 will make the program compilable and it will print the following: Base: Hello Derived.
+----------------------------------------------------------------------------------------------------------
+Q5 - What is the output of the following application?
+abstract class Car {
+    static {
+        System.out.print("1");
+    }
+
+    public Car(String name) {
+        super();
+        System.out.print("2");
+    }
+
+    {
+        System.out.print("3");
+    }
+}
+
+public class BlueCar extends Car {
+    {
+        System.out.print("4");
+    }
+
+    public BlueCar() {
+        super("blue");
+        System.out.print("5");
+    }
+
+    public static void main(String[] gears) {
+        new BlueCar();
+    }
+}
+ans
+C. 13245
+-------------------------------------------------------------------------------------------------------------------
+Q6 - What is the output of the following application?
+class Math {
+    public final double secret = 2;
+}
+
+class ComplexMath extends Math {
+    public final double secret = 4;
+}
+
+public class InfiniteMath extends ComplexMath {
+    public final double secret = 8;
+
+    public static void main(String[] numbers) {
+        Math math = new InfiniteMath();
+        System.out.print(math.secret);
+    }
+}
+ans
+A. 2
+--------------------------------------------------------------------------------------------------------
+Q7 - Consider the following program and predict the output:
+public class Test {
+    public void print(Integer i) {
+        System.out.println("Integer");
+    }
+
+    public void print(int i) {
+        System.out.println("int");
+    }
+
+    public void print(long i) {
+        System.out.println("long");
+    }
+
+    public static void main(String args[]) {
+        Test test = new Test();
+        test.print(10);
+    }
+}
+ans ;
+d) int
